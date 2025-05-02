@@ -45,50 +45,49 @@ class HomePage extends StatelessWidget {
           onPressed: () {},
         ),
       ),
-      body: SafeArea(
-        child: SingleChildScrollView(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 20),
-            child: Column(
-              children: [
-                // "Places to Go" button
-                Container(
-                  width: double.infinity,
-                  height: 50,
-                  decoration: BoxDecoration(
-                    color: const Color(0xFFD4BE7F),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: const Center(
-                    child: Text(
-                      'Places to Go',
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                        fontFamily: 'Times New Roman',
-                      ),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 20),
+          child: Column(
+            children: [
+              // "Places to Go" title
+              Container(
+                width: double.infinity,
+                height: 50,
+                decoration: BoxDecoration(
+                  color: const Color(0xFFD4BE7F),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: const Center(
+                  child: Text(
+                    'Places to Go',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      fontFamily: 'Times New Roman',
                     ),
                   ),
                 ),
-                const SizedBox(height: 20),
-                CategoryCard(
-                  title: 'Events',
-                  subtitle: 'Find current events to go in Brunei',
-                ),
-                const SizedBox(height: 20),
-                CategoryCard(
-                  title: 'Shops',
-                  subtitle: 'Find shops at your convenience',
-                ),
-                const SizedBox(height: 20),
-                CategoryCard(
-                  title: 'Interesting\nPlaces',
-                  subtitle: '',
-                  titleLineHeight: 1.2,
-                ),
-              ],
-            ),
+              ),
+              const SizedBox(height: 20),
+              // Category Cards
+              CategoryCard(
+                title: 'Events',
+                subtitle: 'Find current events to go in Brunei',
+              ),
+              const SizedBox(height: 20),
+              CategoryCard(
+                title: 'Shops',
+                subtitle: 'Find shops at your convenience',
+              ),
+              const SizedBox(height: 20),
+              CategoryCard(
+                title: 'Interesting\nPlaces',
+                subtitle: '',
+                titleLineHeight: 1.2,
+              ),
+            ],
           ),
         ),
       ),
@@ -112,7 +111,6 @@ class CategoryCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      // Removed fixed height
       decoration: BoxDecoration(
         color: const Color(0xFFF9B208),
         borderRadius: BorderRadius.circular(10),
